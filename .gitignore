@@ -1,0 +1,38 @@
+# --- Terraform Specific ---
+# Local directory used by 'terraform init'
+.terraform/
+
+# State files: Never upload these (contains your architecture secrets)
+*.tfstate
+*.tfstate.*
+
+# Crash logs
+crash.log
+*.usage.json
+
+# --- Variables & Secrets ---
+# Sensitive values (IPs, IDs, Keys) should go in these files
+*.tfvars
+*.tfvars.json
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# --- AWS & Security ---
+# Private and Public keys (The "Soul" Protocol)
+*.pem
+*.ppk
+*.pub
+*.key
+
+# Local AWS config/credentials (if you copied them locally)
+.aws/
+credentials
+access_keys.csv
+
+# --- System & IDE ---
+.DS_Store
+.vscode/
+.idea/
+*.swp
