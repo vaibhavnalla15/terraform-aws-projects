@@ -36,7 +36,7 @@ resource "aws_instance" "tf_ec2" {
               yum install -y httpd
               systemctl start httpd
               systemctl enable httpd
-              echo "<h1>Hello from Terraform EC2</h1>" > /var/www/html/index.html
+              echo "<h1>Hello from ec2_${count.index + 1}</h1>" > /var/www/html/index.html
               EOF
 
   tags = {
