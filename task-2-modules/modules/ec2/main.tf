@@ -40,6 +40,6 @@ resource "aws_instance" "tf_ec2" {
               EOF
 
   tags = {
-    Name = "tf_ec2_instance"
+    Name = "tf_ec2_${count.index + 1}"
   }
 }
