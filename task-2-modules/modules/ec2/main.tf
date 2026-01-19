@@ -29,6 +29,7 @@ resource "aws_instance" "tf_ec2" {
   vpc_security_group_ids      = [aws_security_group.sg.id]
   key_name                    = var.key_name
   associate_public_ip_address = true
+  count = var.instance_count
 
     user_data = <<-EOF
               #!/bin/bash

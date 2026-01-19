@@ -27,3 +27,8 @@ variable "key_name" {
   description = "Name of the EC2 key pair"
   type        = string
 }
+
+variable "instance_count" {
+  type    = number
+  default = 1
+}
