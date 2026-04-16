@@ -25,7 +25,7 @@ terraform {
 # create s3 bucket  
 
 resource "aws_s3_bucket" "tf-bucket" {
-  bucket = "tf-bucket-0202"
+  bucket = var.bucket_name
 
   tags = {
     Name        = "My bucket-2.0"
